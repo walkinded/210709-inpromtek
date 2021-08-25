@@ -410,4 +410,20 @@
     });
   }
 
+
+  /* NEW JS */ 
+  $('#equipment-slider').slick({
+    slidesToShow: 1,
+    arrows: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1281,
+        settings: {
+          arrows: true,
+          slidesToShow: 3
+        }
+      }
+    ]
+  });
 })(jQuery);
