@@ -10722,23 +10722,22 @@ input[type="submit"][disabled] {
   z-index: 10;
   font-size: 0;
   border: 0;
-  width: 36px;
-  height: 36px;
-  background: #000;
-
-  margin: -60px 0 0 0px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  margin: -50px 0 0 0px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 #equipment-slider .slick-arrow.slick-prev {
   left: 0;
-  /* background: url("../img/icon/prev-btn.svg") 0 0 / 100% no-repeat; */
+  background: url("../img/new-img/slick-arr-prev.svg") 0 0 / 100% no-repeat;
 }
 
 #equipment-slider .slick-arrow.slick-next {
   right: 0;
-  /* background: url("../img/icon/next-btn.svg") 0 0 / 100% no-repeat; */
+  background: url("../img/new-img/slick-arr-next.svg") 0 0 / 100% no-repeat;
 }
 
 .slick-prev:hover,
@@ -10777,9 +10776,8 @@ input[type="submit"][disabled] {
   /* flex-direction: column; */
 
   width: 100%;
-  height: 540px;
+  min-height: 540px;
   /* padding: 20px; */
-  padding-bottom: 40px;
   background: #FFF;
   box-shadow: 0 10px 10px rgb(88 152 188 / 10%);
   border-radius: 15px;
@@ -10806,16 +10804,34 @@ input[type="submit"][disabled] {
   object-fit: cover;
   border-radius: 15px 0px 0px 15px;
 }
+.scr_latest-equipment-slider__item .xbtn--grad {
+  height: 45px;
+}
 .equipment-slider__item-content {
   padding: 30px;
   width: 100%;
-  height: 100%;
 }
 
+.item-content__text_modal {
+  display: none;
+  background: #FFF;
+  padding: 50px 20px 30px;
+  height: max-content;
+}
+.item-content__text_modal li {
+  list-style-position: inside;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
 .item-content__text {
   border-radius: 15px;
   border: 1px solid #5e5e5e;
   padding: 20px 18px;
+
+  margin-bottom: 24px;
+
+  max-height: 350px;
+  overflow: scroll;
 }
 
 .item-content__text li {
@@ -10857,6 +10873,9 @@ input[type="submit"][disabled] {
   .form-wrap__item {
     flex-direction: column
   }
+  .scr_latest-equipment-slider__item img {
+    max-width: 265px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -10897,6 +10916,19 @@ input[type="submit"][disabled] {
   }
   .scr_accessories__form .wpcf7-form {
     flex-direction: column;
+  }
+  .scr_latest-equipment-slider__item {
+    flex-direction: column;
+  }
+  .scr_latest-equipment-slider__item img {
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .item-content__text {
+    max-height: 100px;
   }
 }
 

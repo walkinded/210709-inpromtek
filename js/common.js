@@ -418,10 +418,9 @@
     dots: true,
     responsive: [
       {
-        breakpoint: 1281,
+        breakpoint: 640,
         settings: {
-          arrows: true,
-          slidesToShow: 3
+          arrows: false,
         }
       }
     ]
