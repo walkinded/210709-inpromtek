@@ -10773,11 +10773,12 @@ input[type="submit"][disabled] {
 .scr_latest-equipment-slider__item {
   position: relative;
   display: flex;
-  flex-direction: column;
+  /* overflow: hidden; */
+  /* flex-direction: column; */
 
   width: 100%;
   height: 540px;
-  padding: 20px;
+  /* padding: 20px; */
   padding-bottom: 40px;
   background: #FFF;
   box-shadow: 0 10px 10px rgb(88 152 188 / 10%);
@@ -10799,6 +10800,33 @@ input[type="submit"][disabled] {
   z-index: -1;
 }
 
+.scr_latest-equipment-slider__item img {
+  max-width: 665px;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 15px 0px 0px 15px;
+}
+.equipment-slider__item-content {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.item-content__text {
+  border-radius: 15px;
+  border: 1px solid #5e5e5e;
+  padding: 20px 18px;
+}
+
+.item-content__text li {
+  list-style-position: inside;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.item-content__text li:last-child {
+  margin-bottom: 0px;
+}
 
 @media screen and (max-width: 1366px) {
   .scr_accessories__item {
