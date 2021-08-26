@@ -425,4 +425,25 @@
       }
     ]
   });
+  $('#persons-slider').slick({
+    slidesToShow: 2,
+    arrows: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          arrows: true,
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
 })(jQuery);

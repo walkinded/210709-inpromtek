@@ -10689,6 +10689,10 @@ input[type="submit"][disabled] {
   color: #FFF;
 }
 
+.scr_latest-equipment-slider {
+  padding: 50px 0;
+}
+
 /* slick */
 .slick-track {
   display: flex;
@@ -10701,6 +10705,7 @@ input[type="submit"][disabled] {
 #equipment-slider {
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 #equipment-slider .slick-list {
   overflow: hidden;
@@ -10711,12 +10716,7 @@ input[type="submit"][disabled] {
   margin: 0 10px;
 }
 
-#equipment-slider {
-  min-width: 0;
-  position: relative;
-}
-
-#equipment-slider .slick-arrow {
+.slick-arrow {
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -10730,12 +10730,12 @@ input[type="submit"][disabled] {
   transition: all 0.3s;
 }
 
-#equipment-slider .slick-arrow.slick-prev {
+.slick-arrow.slick-prev {
   left: 0;
   background: url("../img/new-img/slick-arr-prev.svg") 0 0 / 100% no-repeat;
 }
 
-#equipment-slider .slick-arrow.slick-next {
+.slick-arrow.slick-next {
   right: 0;
   background: url("../img/new-img/slick-arr-next.svg") 0 0 / 100% no-repeat;
 }
@@ -10825,13 +10825,13 @@ input[type="submit"][disabled] {
 }
 .item-content__text {
   border-radius: 15px;
-  border: 1px solid #5e5e5e;
+  border: 1px solid #e1eaf0;
   padding: 20px 18px;
 
   margin-bottom: 24px;
 
   max-height: 350px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .item-content__text li {
@@ -10844,6 +10844,110 @@ input[type="submit"][disabled] {
   margin-bottom: 0px;
 }
 
+.bg__color-dark {
+  background: #e4ecf2;
+}
+
+.scr_key-persons-slider {
+  padding: 54px 0px;
+}
+
+.scr_key-persons-slider .scr_key-persons-desc {
+  margin-bottom: 55px;
+}
+.scr_key-persons-desc {
+  font-size: 18px;
+}
+
+
+.scr_key-persons-slider__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 665px;
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  padding-bottom: 40px;
+  background: #FFF;
+  box-shadow: 0 10px 10px rgb(88 152 188 / 10%);
+  border-radius: 15px;
+}
+
+.scr_key-persons-slider__item::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: -10px;
+  display: block;
+  height: 100%;
+  background: #FFF;
+  opacity: .5;
+  box-shadow: 0 10px 10px rgb(88 152 188 / 10%);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.scr_key-persons-slider__bio {
+  display: flex;
+  margin-bottom: 30px;
+}
+.scr_key-persons-slider__bio img{
+  max-width: 260px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.scr_key-persons-slider__text {
+  margin-left: 30px;
+}
+.scr_key-persons-slider__name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.scr_key-persons-slider__status {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.scr_key-persons-slider__desc {
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e1eaf0;
+}
+.scr_key-persons-slider__desc li {
+  list-style-position: inside;
+}
+.scr_key-persons-slider__contacts {
+  display: flex;
+}
+
+.scr_key-persons-slider__contacts li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-right: 21%;
+}
+.scr_key-persons-slider__contacts li:last-child {
+  margin-right: 0px;
+}
+.scr_key-persons-slider__contacts li a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+#persons-slider {
+  position: relative;
+  /* z-index: 1; */
+  min-width: 0;
+}
+#persons-slider .slick-list {
+  overflow: hidden;
+  min-height: 470px;
+}
+
+#persons-slider .slick-slide {
+  margin: 0 10px;
+}
 @media screen and (max-width: 1366px) {
   .scr_accessories__item {
     max-width: 600px;
@@ -10861,6 +10965,10 @@ input[type="submit"][disabled] {
   }
   .lead--landing .lead__content_width {
     width: 100%;
+  }
+
+  #persons-slider .slick-slide {
+    margin: 0 auto;
   }
   
 }
@@ -10892,6 +11000,10 @@ input[type="submit"][disabled] {
   .scr_workshop-capacity-gallery__item:last-child {
     grid-row: 2;
     grid-column: auto;
+  }
+  .scr_latest-equipment-slider,
+  .scr_key-persons-slider {
+    padding: 30px 0;
   }
 }
 
@@ -10929,6 +11041,25 @@ input[type="submit"][disabled] {
   }
   .item-content__text {
     max-height: 100px;
+  }
+  .scr_key-persons-slider__text {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .scr_key-persons-slider__bio {
+    flex-direction: column;
+    align-items: center;
+  }
+  .scr_key-persons-slider__contacts li {
+    margin-right: 0%;
+  }
+  .scr_key-persons-slider__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
